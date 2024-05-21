@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 43px;
+  padding: 3px;
+  margin: 2px;
+}
+
+.button__btn {
+  font-family: inherit;
+  font-size: 15px;
+  width: 100%;
+  height: 95%;
+  background: #dadce0;
+  color: #202124;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button__btn:hover {
+  background-color: #869cb9;
+}
