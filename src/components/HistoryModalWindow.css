@@ -1,0 +1,10 @@
+.modalWindow {
+  width: 448px;
+  height: 248px;
+  background-color: white;
+  border-radius: 11px;
+  margin-top: 10px;
+  color: black;
+  text-align: start;
+  padding: 15px;
+}

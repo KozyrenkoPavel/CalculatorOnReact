@@ -6,10 +6,20 @@ import isTrigeometricValue from '../utils/isTrigeometricValue';
 let valueInput = '';
 let value = '';
 let factorial = '';
+let resultModalWindow = '';
+let arrayResultModalWindow = [];
+let resultModal = '';
+let isEquals = false;
 
 function Button(props) {
   const getValueBtnInInput = (event) => {
     const target = event.target.innerText;
+
+    if (isEquals) {
+      value = '';
+      valueInput = '';
+      isEquals = false;
+    }
 
     valueInput += target;
     value += getMathematicalOperation()[target];
@@ -30,11 +40,31 @@ function Button(props) {
     } else if (target === '=') {
       value = eval(value);
       valueInput = value;
+
+      resultModalWindow = resultModalWindow + ' = ' + valueInput;
+      arrayResultModalWindow.push(resultModalWindow);
+      isEquals = true;
     } else if (isTrigeometricValue(valueInput)) {
       valueInput = valueInput.replace(
         target,
         getMathematicalOperation()[target]
       );
+    }
+
+    if (target !== '=') {
+      resultModalWindow = valueInput;
+    }
+
+    props.setRusltModalWindow(resultModalWindow);
+
+    if (arrayResultModalWindow.length !== 0) {
+      arrayResultModalWindow.forEach((result) => {
+        if (!resultModal.includes(result)) {
+          return (resultModal += result + ';' + '\n');
+        }
+      });
+
+      props.setRusltModalWindow(resultModal);
     }
 
     props.getInput(valueInput);

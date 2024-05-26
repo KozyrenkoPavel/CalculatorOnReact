@@ -13,6 +13,7 @@
   width: 98%;
   height: 70px;
   padding: 10px;
+  position: relative;
 }
 
 .input__value {
@@ -23,8 +24,6 @@
   border-radius: 11px;
   font-family: inherit;
   font-size: 30px;
-  /* direction: rtl; */
-  /* caret-color: transparent; */
 }
 
 .input__value::-webkit-outer-spin-button,

@@ -7,7 +7,12 @@ function Buttons(props) {
     <div className="buttons">
       {titleButtons.map((titleBtn) => {
         return (
-          <Button key={titleBtn} text={titleBtn} getInput={props.getInput} />
+          <Button
+            key={titleBtn}
+            text={titleBtn}
+            getInput={props.getInput}
+            setRusltModalWindow={props.setRusltModalWindow}
+          />
         );
       })}
     </div>

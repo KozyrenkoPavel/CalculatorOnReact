@@ -1,0 +1,8 @@
+.story {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 30%;
+  left: 93%;
+  cursor: pointer;
+}
